@@ -1,0 +1,5 @@
+home/migrations/*
+*.sqlite3
+.env
+*.pyc
+*~
