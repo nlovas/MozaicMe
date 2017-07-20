@@ -3,14 +3,27 @@
   <head>
     <title>MozaicMe</title>
     <meta charset="utf-8" />
+	{% load static %}
+	{% block extra_head %}
+	<script type="text/javascript" src="{% static 'jquery.min.js' %}"></script>
+	<script type="text/javascript" src="{% static 'uploader.js' %}"></script>
+	{% endblock %}
+	
 	<body>
 	<h1>MozaicMe</h1>
 	<div class = "info">
 	<p>Welcome to MozaicMe. This application takes one of your images and turns it into a mozaic!</p>
 	<p>Just upload an image and add tags.</p>
-	<button type = "button" id="uploadImage">Upload</button>
-	<button type = "button" id = "submit">MozaicMe!</button>
+	<div id= "imgUpldContainer">
+		<form id="displayForm" runat="server">
+		<input type = "file" accept = "image/*" id="uploadImage"/>
+		<!-- <input type = "submit" id = "submit">MozaicMe!</button> -->
+		<img id='preview' src='#'/>
+	</form>
+	</div>
 	<p>Look through the gallery of mozaics.</p>
 	</div>
+	
+	
 </body>
 </html>
