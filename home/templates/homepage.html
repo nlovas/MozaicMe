@@ -7,6 +7,7 @@
 	{% block extra_head %}
 	<script type="text/javascript" src="{% static 'jquery.min.js' %}"></script>
 	<script type="text/javascript" src="{% static 'uploader.js' %}"></script>
+	<link href="{% static 'home.css' %}" rel="stylesheet" type="text/css"/>
 	{% endblock %}
 	
 	<body>
@@ -17,9 +18,11 @@
 	<div id= "imgUpldContainer">
 		<form id="displayForm" runat="server">
 		<input type = "file" accept = "image/*" id="uploadImage"/>
-		<!-- <input type = "submit" id = "submit">MozaicMe!</button> -->
-		<img id='preview' src='#'/>
+		<input type = "submit" id = "submit" value="MozaicMe!"/>
+		
 	</form>
+	<img id='preview' src=''/>
+	<!--<canvas id = "previewCanvas" width="200px"height="100px" style="border:1px solid #000000;"></canvas>-->
 	</div>
 	<p>Look through the gallery of mozaics.</p>
 	</div>
